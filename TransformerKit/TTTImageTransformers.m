@@ -47,7 +47,7 @@ static inline NSData * NSImageRepresentationWithType(NSImage *image, NSBitmapIma
 
 @implementation TTTImageTransformers
 
-+ (void)load {
++ (void)initialize {
     @autoreleasepool {
 #if __IPHONE_OS_VERSION_MIN_REQUIRED
         Class imageClass = [UIImage class];

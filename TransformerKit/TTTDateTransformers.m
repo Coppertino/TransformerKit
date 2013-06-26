@@ -75,7 +75,7 @@ static NSDate * TTTDateFromISO8601Timestamp(NSString *timestamp) {
 
 @implementation TTTDateTransformers
 
-+ (void)load {
++ (void)initialize {
     @autoreleasepool {
         [NSValueTransformer registerValueTransformerWithName:TTTISO8601DateTransformerName transformedValueClass:[NSDate class] returningTransformedValueWithBlock:^id(id value) {
             return TTTISO8601TimestampFromDate(value);

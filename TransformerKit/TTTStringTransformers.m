@@ -55,7 +55,7 @@ static NSString * TTTReversedStringWithString(NSString *string) {
 
 @implementation TTTStringTransformers
 
-+ (void)load {
++ (void)initialize {
     @autoreleasepool {
         [NSValueTransformer registerValueTransformerWithName:TTTCapitalizedStringTransformerName transformedValueClass:[NSString class] returningTransformedValueWithBlock:^id(id value) {
             return [value capitalizedString];
